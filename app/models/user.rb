@@ -1,9 +1,12 @@
 class User < ApplicationRecord
+  TOKEN_DELIMITER = ':'.freeze
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  has_many :devices
+  has_many :notes
 
   validates :email, format: { with: VALID_EMAIL_REGEX }, presence: true
 
@@ -32,5 +35,11 @@ class User < ApplicationRecord
     end
   end
 
+
+  private
+
+  def create_device!
+    Device.create(user: self.id, uuid: SecureRandom.uuid)
+  end
 
 end

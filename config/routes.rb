@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
   namespace :api do
     api_version(:module => "V1", :path => {:value => "v1"}) do
-      post 'users/sign_up', to: 'users/registrations#create'
+      as :api_v1_user do
+        post 'users/sign_up', to: 'users/registrations#create'
+      end
+
       devise_for :users, skip: :registrations, controllers: {
           sessions: 'api/v1/users/sessions',
       }

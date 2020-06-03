@@ -1,10 +1,10 @@
 class Api::V1::Users::RegistrationsController < Devise::RegistrationsController
-  include Concerns::Api::V1::ExceptionHandler
+  include ExceptionHandler
 
   def create
-    resource = build_resource(resource_params.merge(accepted_terms_at: Time.now))
+    resource = build_resource(resource_params)
     if resource.save
-      render json: { data: { email: resource.email, name: resource.name } }, status: 201
+      render json: { data: { email: resource.email } }, status: 201
     else
       warden.custom_failure!
       raise ValidationError, resource.errors
@@ -14,6 +14,6 @@ class Api::V1::Users::RegistrationsController < Devise::RegistrationsController
   protected
 
   def resource_params
-    params.permit(:email, :password, :name, :terms)
+    params.permit(:email, :password)
   end
 end
