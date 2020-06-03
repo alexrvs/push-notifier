@@ -12,6 +12,6 @@ Demo Admin Credentials:
 
 ## Api docs
 
-https://notifier-rvs.herokuapp.com/apipie
+https://notifier-rvs.herokuapp.com/apidoc
 
 
