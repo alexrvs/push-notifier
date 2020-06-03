@@ -15,3 +15,6 @@ Demo Admin Credentials:
 https://notifier-rvs.herokuapp.com/apidoc
 
 
+## Sidekiq monitor
+
+https://notifier-rvs.herokuapp.com/sidekiq
