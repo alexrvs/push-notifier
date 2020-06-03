@@ -1,0 +1,255 @@
+  <h4><a href='#notes'>Notes</a></h4>
+  <ul>
+      <li><a href='#notes-create'>create</a></li>
+  </ul>
+  <h4><a href='#registrations'>Registrations</a></h4>
+  <ul>
+      <li><a href='#registrations-create'>create</a></li>
+  </ul>
+  <h4><a href='#sessions'>Sessions</a></h4>
+  <ul>
+      <li><a href='#sessions-create'>create</a></li>
+  </ul>
+
+
+
+  <hr/>
+
+  <div>
+    <h2 id="notes">
+      <a href='#notes'>Notes</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="notes-create">
+      <a href='#notes'>Notes</a> / <a href='#notes-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/v1/notes
+            <br>
+            <small>Create Note</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>user </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+<p>User info</p>
+
+    </li>
+    <ul>
+    <li>
+      <strong>message </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Message of note</p>
+
+    </li>
+    
+    <li>
+      <strong>received_at </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a DateTime</p>
+ ]
+      </small>
+      
+<p>Date of note</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="registrations">
+      <a href='#registrations'>Registrations</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="registrations-create">
+      <a href='#registrations'>Registrations</a> / <a href='#registrations-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/v1/users/sign_up
+            <br>
+            <small>Create new user</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>user </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>email </strong>:
+      <small>
+        optional
+        , nil allowed
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Email of the new user</p>
+
+    </li>
+    
+    <li>
+      <strong>password </strong>:
+      <small>
+        optional
+        , nil allowed
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Password of the new user</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="sessions">
+      <a href='#sessions'>Sessions</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="sessions-create">
+      <a href='#sessions'>Sessions</a> / <a href='#sessions-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/v1/users/sign_in
+            <br>
+            <small>Login an user</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>user </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+<p>User info</p>
+
+    </li>
+    <ul>
+    <li>
+      <strong>email </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Email for login</p>
+
+    </li>
+    
+    <li>
+      <strong>password </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Password for login</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+  </div>
