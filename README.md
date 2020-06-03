@@ -1,24 +1,17 @@
 # README
+Test Push Notifier
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Admin Side  
+https://notifier-rvs.herokuapp.com/admin
 
-Things you may want to cover:
+Demo Admin Credentials:
 
-* Ruby version
+    login: example@gmail.com
+    password: password
 
-* System dependencies
 
-* Configuration
+## Api docs
 
-* Database creation
+https://notifier-rvs.herokuapp.com/apipie
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

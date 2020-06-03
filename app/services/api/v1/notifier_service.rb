@@ -10,8 +10,8 @@ module Api
 
       def process!
         @user.devices.each do |device|
-          IosNotifierWorker.perform_at(@note.received_at, @note.message) if device.ios?
-          AndroidNotifierWorker.perform_at(@note.received_at, @note.message) if device.android?
+          IosNotifierWorker.perform_at(1.minute.from_now, @note.message) if device.ios?
+          AndroidNotifierWorker.perform_at(1.minute.from_now, @note.message) if device.android?
         end
       end
 

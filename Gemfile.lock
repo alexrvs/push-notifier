@@ -76,6 +76,8 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
+    apipie-rails (0.5.18)
+      rails (>= 4.1)
     arbre (1.2.1)
       activesupport (>= 3.0.0)
     ast (2.4.0)
@@ -293,6 +295,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
   activeadmin
+  apipie-rails
   bootsnap (>= 1.4.2)
   byebug
   devise
