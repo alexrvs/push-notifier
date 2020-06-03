@@ -16,6 +16,12 @@ gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'sidekiq'
+# Apple push notifications
+gem 'houston'
+# Android push notifications
+gem 'fcm'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'rack-cors'
@@ -31,7 +37,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # gem 'rack-cors'
 
 #Active Admin
-#gem 'activeadmin'
+gem 'activeadmin'
 
 # Plus integrations with:
 gem 'devise'
@@ -42,6 +48,10 @@ gem 'pundit'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  gem 'pry'
+  gem 'pry-nav'
+  gem 'rubocop', require: false
 end
 
 group :development do

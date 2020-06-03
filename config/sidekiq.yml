@@ -1,0 +1,5 @@
+:queues:
+  - [notifications, 2]
+  - default
+:pidfile: ./tmp/pids/sidekiq.pid
+:logfile: ./log/sidekiq.log

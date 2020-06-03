@@ -39,7 +39,7 @@ class User < ApplicationRecord
   private
 
   def create_device!
-    Device.create(user: self.id, uuid: SecureRandom.uuid)
+    Device.create(user: self, uuid: SecureRandom.uuid)
   end
 
 end

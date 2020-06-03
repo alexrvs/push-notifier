@@ -1,5 +1,4 @@
-class ApplicationController < ActionController::Base
-  skip_before_action :verify_authenticity_token
+class BaseController < ActionController::API
 
   def render_this(obj: nil, collection: nil, status: :ok, msg: false, meta: false)
     json = {}
