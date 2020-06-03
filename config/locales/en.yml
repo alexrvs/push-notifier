@@ -1,0 +1,14 @@
+en:
+  auth:
+    sessions:
+      bad_credentials: "Oops! The email or password you entered is incorrect. Please try again."
+      something_went_wrong: "Something went wrong :("
+    passwords:
+      user_not_found: "Username with such email doesn't exist!"
+      bad_reset_token: "Bad token or email!"
+    errors:
+      messages:
+        not_email: "Please enter a valid email"
+        not_authenticate: "You are not authenticate for this page."
+    failure:
+      unconfirmed: "You have to confirm your email address before continuing."
