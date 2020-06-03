@@ -1,5 +1,4 @@
 :queues:
-  - [notifications, 2]
-  - default
+  - notifications
 :pidfile: ./tmp/pids/sidekiq.pid
 :logfile: ./log/sidekiq.log

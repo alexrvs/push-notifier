@@ -84,7 +84,6 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.4)
     byebug (11.1.3)
-    cancancan (3.1.0)
     case_transform (0.2)
       activesupport
     coderay (1.1.3)
@@ -99,6 +98,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dotenv (2.7.5)
     draper (4.0.1)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -182,8 +182,6 @@ GEM
       pry (>= 0.9.10, < 0.13.0)
     puma (4.3.5)
       nio4r (~> 2.0)
-    pundit (2.1.0)
-      activesupport (>= 3.0.0)
     rack (2.2.2)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
@@ -297,8 +295,8 @@ DEPENDENCIES
   activeadmin
   bootsnap (>= 1.4.2)
   byebug
-  cancancan
   devise
+  dotenv
   draper
   fcm
   houston
@@ -307,7 +305,6 @@ DEPENDENCIES
   pry
   pry-nav
   puma (~> 4.1)
-  pundit
   rack-cors
   rails (~> 6.0.3)
   redis (~> 4.0)

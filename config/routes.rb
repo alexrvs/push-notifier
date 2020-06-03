@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
       devise_for :users, skip: :registrations, controllers: {
           sessions: 'api/v1/users/sessions',
       }
+      resources :notes
     end
   end
 

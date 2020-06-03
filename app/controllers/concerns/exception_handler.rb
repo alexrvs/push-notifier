@@ -4,7 +4,6 @@ module ExceptionHandler
   included do
     rescue_from ActiveRecord::RecordNotFound, with: :not_found
     rescue_from ActiveRecord::RecordInvalid,  with: :invalid_record
-    rescue_from CanCan::AccessDenied,         with: :access_denied
     rescue_from AuthorizationError,           with: :not_authorize
     rescue_from ValidationError,              with: :validation_error
     rescue_from MessageError,                 with: :message_error
