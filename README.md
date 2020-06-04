@@ -6,7 +6,7 @@ https://notifier-rvs.herokuapp.com/admin
 
 Demo Admin Credentials:
 
-    login: example@gmail.com
+    login: admin@example.com
     password: password
 
 
